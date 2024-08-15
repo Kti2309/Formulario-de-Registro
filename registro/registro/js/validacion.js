@@ -6,21 +6,14 @@ function showAlertError() {
     document.getElementById("alert-danger").classList.add("show");
 }
 
-function validarContraseña() {
-    if (document.getElementsByClassName("password1").length<6){
-        showAlertError()
+const nombre= document.getElementById('nombre')
+const btn =document.getElementById('regBtn')
+
+btn.addEventListener('click', ()=>{
+    if(nombre.value === 'yordan'){
+        showAlertSuccess()
     }else{
-        return false;
+        showAlertError()
     }
+})
 
-}
-
-function validarRepetirContraseña() {
-    if (document.getElementsById("password1") === document.getElementsByClassName("password2")){
-
-        return true;  
-    } else{ showAlertError()
-
-    }
-     
-}
